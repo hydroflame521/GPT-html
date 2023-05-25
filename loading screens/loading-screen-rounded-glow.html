@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(-45deg, #4287f5, #8f3def);
+      background-size: 400% 400%;
+      animation: gradient 8s ease-in-out infinite;
+      font-family: Arial, sans-serif;
+    }
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 200px;
+      background-color: transparent;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 16px rgba(255, 255, 255, 0.4);
+      overflow: hidden;
+    }
+    
+    .loader-text {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    
+    .loader-bar {
+      width: 80%;
+      height: 20px;
+      background-color: transparent;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid #fff;
+    }
+    
+    .loader-fill {
+      width: 0;
+      height: 100%;
+      background-color: white;
+      animation: fill 4s linear infinite;
+      border-radius: 8px;
+    }
+    
+    @keyframes fill {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+  </style>
+  <script>
+    // JavaScript
+    // setTimeout(function() {
+      // window.location.href = "another_page.html"; // Replace "another_page.html" with the target HTML file you want to redirect to
+    // }, 3950); // Adjust the delay (in milliseconds) as desired
+  </script>
+</head>
+<body>
+  <div class="loader-container">
+    <div class="loader-text">Loading...</div>
+    <div class="loader-bar">
+      <div class="loader-fill"></div>
+    </div>
+  </div>
+</body>
+</html>
